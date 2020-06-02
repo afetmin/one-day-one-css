@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS实现三角形</title>
+</head>
+<body>
+  <div class="container"></div>
+  <div class="top"></div>
+</body>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 0;
+    height: 0;
+    margin: 20px auto;
+    border-width:200px;
+    border-style: solid;
+    border-left-color: blue;
+    border-right-color: yellowgreen;
+    border-top-color: violet;
+    border-bottom-color: tomato;
+
+  }
+  .top {
+    width: 0px;
+    height: 0px;
+    margin: 100px auto;
+    /* 其他三边变透明，一边有颜色 */
+    border: 150px solid transparent;
+    border-bottom-color: blueviolet;
+  }
+</style>
+</html>
