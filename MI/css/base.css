@@ -4,9 +4,20 @@
   display: table;
   clear: both;
 }
+/* 去除a的下划线 */
+a {
+  text-decoration: none;
+}
+
 body {
   font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
   color: #333;
   background-color: #fff;
   min-width: 1226px;
+}
+
+/* 公用的居中类 */
+.w {
+  width: 1226px;
+  margin: 0 auto;
 }
