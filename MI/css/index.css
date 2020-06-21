@@ -118,6 +118,7 @@ span.msg {
   height: 100px;
 }
 
+/* 设置logo容器 */
 .header .logo {
   position: relative;
   float: left;
@@ -126,8 +127,10 @@ span.msg {
   height: 55px;
   /* 两个并列的logo先隐藏掉左边的 */
   overflow: hidden;
+  /* 隐藏h1的文字内容 ：缩进-9999px */
+  text-indent: -9999px;
 }
-
+/* 统一设置超链接 */
 .header .logo a {
   position: absolute;
   width: 55px;
@@ -138,7 +141,7 @@ span.msg {
   background-position: center;
   transition: left 0.2s;
 }
-
+/* 设置logo-home 的位置 */
 .header .logo .home {
   background-image: url(../img/mi-home.png);
   left: -55px;
