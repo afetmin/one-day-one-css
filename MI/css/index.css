@@ -124,6 +124,7 @@ span.msg {
   margin-top: 22px;
   width: 55px;
   height: 55px;
+  /* 两个并列的logo先隐藏掉左边的 */
   overflow: hidden;
 }
 
