@@ -152,3 +152,29 @@ span.msg {
 .logo:hover .home {
   left: 0;
 }
+/* 设置导航条 */
+.nav-wrapper {
+  float: left;
+  margin-left: 7px;
+}
+.nav {
+
+  height: 100px;
+  line-height: 100px;
+  padding-left: 58px;
+}
+.nav li {
+  float: left;
+  margin-right: 20px;
+}
+.nav li a {
+  display: inline-block;
+  font-size: 16px;
+  color: #333;
+}
+.nav li a:hover {
+  color: #ff6700;
+}
+.allgoods {
+  visibility: hidden;
+}
