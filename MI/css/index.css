@@ -58,6 +58,7 @@
   position: absolute;
   top: 40px;
   left: 50%;
+  z-index: 1;
   width: 124px;
   /* 为了动画效果 高度为0，内容hidden*/
   height: 0;
@@ -95,6 +96,7 @@
   position: absolute;
   right: 0;
   top: 40px;
+  z-index: 2;
   width: 316px;
   height: 0;
   overflow: hidden;
@@ -113,7 +115,9 @@ span.msg {
   display: inline-block;
   padding: 20px 0 20px;
 }
-
+.header-wrapper {
+  position: relative;
+}
 .header {
   height: 100px;
 }
@@ -165,10 +169,10 @@ span.msg {
 }
 .nav li {
   float: left;
-  margin-right: 20px;
+  padding-right: 20px;
 }
 .nav li a {
-  display: inline-block;
+  display: block;
   font-size: 16px;
   color: #333;
 }
@@ -177,4 +181,81 @@ span.msg {
 }
 .allgoods {
   visibility: hidden;
+}
+
+.goodsinfo {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  transition: height .4s;
+  z-index: 999;
+}
+/* hover要写在下面，不然会被同类覆盖 */
+.nav li:not(:first-of-type):not(:nth-child(9)):not(:nth-child(10)):hover ~ .goodsinfo,
+.goodsinfo:hover {
+  height: 228px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgb(224,224,224);
+}
+
+.search-warpper {
+  width: 296px;
+  height: 50px;
+  float: right;
+  margin-top: 25px;
+}
+
+/* 都浮动去除相邻的空隙 */
+.search-warpper .search-input {
+  float: left;
+  box-sizing: border-box;
+  width: 223px;
+  height: 48px;
+  border: 1px solid #e0e0e0;
+  padding: 0 10px;
+  outline: 0;
+  font-size: 14px;
+  line-height: 48px;
+}
+
+.search-warpper .search-btn {
+  float: left;
+  width: 52px;
+  height: 48px;
+  border: none;
+  padding: 0;
+  color: #616161;
+  background-color: #fff;
+  font-size: 20px;
+  border: 1px solid #e0e0e0;
+  border-left: none;
+}
+
+.search-input:hover{
+  border: 1px solid #b0b0b0;
+}
+.search-input:hover + button {
+  border: 1px solid #b0b0b0;
+  border-left: none;
+}
+
+/* 分别设置使边框不会重叠 */
+.search-input:focus {
+  border: 1px solid #ff6700;
+}
+.search-input:focus + button {
+  border: 1px solid #ff6700;
+  border-left: none;
+}
+.search-btn:hover {
+  background-color: #ff6700;
+  color: #fff;
+  border: 1px solid #ff6700;
+}
+/* 去掉点击时的轮廓 */
+.search-btn:focus {
+  outline: 0;
 }
