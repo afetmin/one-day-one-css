@@ -190,7 +190,7 @@ span.msg {
 .left-menu {
   width: 234px;
   height: 420px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   left: -120px;
   z-index: 9;
@@ -226,6 +226,7 @@ span.msg {
   left: 0;
   transition: height .4s;
   z-index: 999;
+  background: white;
 }
 /* hover要写在下面，不然会被同类覆盖 */
 .nav li:not(:first-of-type):not(:nth-child(9)):not(:nth-child(10)):hover ~ .goodsinfo,
@@ -292,4 +293,63 @@ span.msg {
 /* 去掉点击时的轮廓 */
 .search-btn:focus {
   outline: 0;
+}
+
+/* 设置首页轮播图 */
+.banner {
+  position: relative;
+  height: 460px;
+}
+.banner li {
+  position: absolute;
+}
+.banner img {
+  width: 100%;
+  /* 图片对齐类似字体，通过设置基线对齐去除空隙 */
+  vertical-align: top;
+}
+
+/* 设置导航点 */
+.pointer {
+  position: absolute;
+  bottom: 22px;
+  right: 35px;
+}
+.pointer a {
+  float: right;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .4);
+  border: 2px solid rgba(0, 0, 0, .4);
+  margin-left: 6px;
+}
+.pointer a:hover,
+.pointer a.active {
+  background: rgba(0, 0, 0, .4);
+  border-color: rgba(255, 255, 255, .4);
+}
+
+.pre-next a {
+  position: absolute;
+  width: 41px;
+  height: 69px;
+  background-image: url(../img/icon-slides.png);
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.pre-next .pre {
+  left: 234px;
+  background-position: -84px 0;
+}
+.pre-next .pre:hover {
+  background-position: 0 0;
+}
+.pre-next .next {
+  right: 0;
+  background-position: -125px 0;
+}
+.pre-next .next:hover {
+  background-position: -42px 0;
 }
