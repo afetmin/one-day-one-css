@@ -58,7 +58,7 @@
   position: absolute;
   top: 40px;
   left: 50%;
-  z-index: 1;
+  z-index: 9999;
   width: 124px;
   /* 为了动画效果 高度为0，内容hidden*/
   height: 0;
@@ -359,16 +359,17 @@ span.msg {
   height: 206px;
   /* background: #bfa; */
   position: fixed;
-  bottom: 50px;
+  bottom: 80px;
   right: 50%;
   /* 只能设置右侧偏移 */
-  margin-right: -650px;
+  margin-right: -639px;
 }
 .icon li {
   position: relative;
 }
 .icon li {
-  border-bottom: 1px solid #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-left: none;
 }
 .icon li:last-child {
   border-bottom: none;
