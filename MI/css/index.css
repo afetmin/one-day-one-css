@@ -422,3 +422,58 @@ span.msg {
   display: block;
   margin: 0 17px 17px 16px;
 }
+
+/* 下部功能区 */
+.tools {
+  height: 170px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.tools .shortcut,
+.tools .tool-img,
+.tools li {
+  float: left;
+}
+
+.tools .shortcut {
+  width: 228px;
+  height: 164px;
+  background: #5f5750;
+  margin-right: 14px;
+  padding: 3px;
+}
+.shortcut li {
+  padding: 0 3px;
+  width: 70px;
+  height: 82px;
+}
+/* 设置超链接 */
+.tools .shortcut a {
+  display: block;
+  color: #cfccca;
+  text-align: center;
+  padding: 18px 0 0;
+  font-size: 12px;
+}
+.tools .shortcut a:hover {
+  color: #fff;
+}
+/* 设置图标字体 */
+.tools .shortcut i {
+  display: block;
+  font-size: 24px;
+  margin: 0 auto 4px;
+}
+.tools .tool-img li{
+  width: 316px;
+  margin-right: 15px;
+}
+.tools .tool-img li:last-child{
+  margin: 0;
+}
+.tools .tool-img img {
+  width: 100%;
+  vertical-align: top;
+}
+
