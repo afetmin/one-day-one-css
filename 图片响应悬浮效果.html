@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #30336b;
+      }
+      .container {
+        position: relative;
+        width: 1100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 30px;
+      }
+      .container .card {
+        position: relative;
+        max-width: 300px;
+        height: 215px;
+        background: #fff;
+        margin: 30px 10px;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 202px rgba(0,  0 , 0, .5);
+        transition: .3s ease-in-out;
+      }
+      .container .card:hover {
+        height: 420px;
+      }
+      .container .card .imgBox {
+        position: relative;
+        width: 260px;
+        height: 260px;
+        top: -60px;
+        left: 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+      }
+      .container .card .imgBox img {
+        width: 260px;
+        height: 260px;
+        border-radius: 4px;
+      }
+      .container .card .content {
+        position: relative;
+        margin-top: -140px;
+        padding: 10px 15px;
+        text-align: center;
+        color: #111;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease-in-out;
+      }
+      .container .card:hover .content {
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: .3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="imgBox">
+          <img src="./img/1.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h2>card one</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
+            quod, itaque qui, rerum, iure sit sed optio excepturi alias nulla
+            cum sunt reiciendis voluptatum eaque tempora laudantium nostrum
+            laborum eos.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imgBox">
+          <img src="./img/2.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h2>card two</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
+            quod, itaque qui, rerum, iure sit sed optio excepturi alias nulla
+            cum sunt reiciendis voluptatum eaque tempora laudantium nostrum
+            laborum eos.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imgBox">
+          <img src="./img/3.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h2>card three</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
+            quod, itaque qui, rerum, iure sit sed optio excepturi alias nulla
+            cum sunt reiciendis voluptatum eaque tempora laudantium nostrum
+            laborum eos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
