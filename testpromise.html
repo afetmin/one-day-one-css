@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fn(ecec) {
+        function a(msg) {
+          console.log("a:", msg);
+        }
+        function b(msg) {
+          console.log("b:", msg);
+        }
+        ecec(a, b);
+      }
+      fn(function e(A, B) {
+        A("how");
+        B("what");
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
