@@ -72,7 +72,7 @@
       minutes = document.getElementById("minutes"),
       seconds = document.getElementById("seconds");
     function twoNum(num) {
-      return num <= 10 ? `0${num}` : num;
+      return num < 10 ? `0${num}` : num;
     }
     function setTime() {
       let time = new Date();
