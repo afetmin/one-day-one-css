@@ -36,11 +36,15 @@
         margin-bottom: 15px;
         border-radius: 5px;
         padding: 10px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        transition: .3s;
+      }
+      .timeline-area div:hover {
+        box-shadow: 0 0 20px #2ecc71;
       }
       /* 线上的圆形 */
       .timeline-area div::before {
-        content: '';
+        content: "";
         display: block;
         width: 10px;
         height: 10px;
@@ -54,7 +58,7 @@
       }
       /* 三角形 */
       .timeline-area div::after {
-        content: '';
+        content: "";
         width: 0;
         height: 0;
         border: 8px solid transparent;
@@ -64,118 +68,119 @@
         top: 10px;
         left: -16px;
       }
-      .timeline-area div p:first-child{
+      .timeline-area div p:first-child {
         display: block;
         position: absolute;
         top: 6px;
         left: -112px;
       }
       .timeline-area div p:last-child {
+        display: block;
         color: #fff;
       }
     </style>
   </head>
   <body>
     <div class="timeline">
-    <div class="timeline-area">
-      <div>
-        <p class="time">12月1日</p>
-        <p class="content">
-          国际医学期刊柳叶刀1月24日在线发表的一项研究显示，
-          首例新型冠状病毒肺炎确诊患者于去年12月1日发病，且无华南海鲜市场暴露史。
-        </p>
-      </div>
-      <div>
-        <p class="time">12月2日</p>
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
-          officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
-          eaque harum voluptate?
-        </p>
-      </div>
-      <div>
-        <p class="time">12月3日</p>
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
-          officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
-          eaque harum voluptate?
-        </p>
-      </div>
-      <div>
-        <p class="time">12月3日</p>
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
-          officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
-          eaque harum voluptate?
-        </p>
-      </div>
-      <div>
-        <p class="time">12月3日</p>
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
-          officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
-          eaque harum voluptate?
-        </p>
-      </div>
-      <div>
-        <p class="time">12月3日</p>
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
-          officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
-          eaque harum voluptate?
-        </p>
-      </div>
-      <div>
-        <p class="time">12月3日</p>
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
-          officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
-          eaque harum voluptate?
-        </p>
-      </div>
-      <div>
-        <p class="time">12月3日</p>
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
-          officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
-          eaque harum voluptate?
-        </p>
-      </div>
-      <div>
-        <p class="time">12月3日</p>
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
-          officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
-          eaque harum voluptate?
-        </p>
-      </div>
-      <div>
-        <p class="time">12月3日</p>
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
-          officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
-          eaque harum voluptate?
-        </p>
-      </div>
-      <div>
-        <p class="time">12月3日</p>
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-          adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
-          officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
-          eaque harum voluptate?
-        </p>
+      <div class="timeline-area">
+        <div>
+          <p class="time">12月1日</p>
+          <p class="content">
+            国际医学期刊柳叶刀1月24日在线发表的一项研究显示，
+            首例新型冠状病毒肺炎确诊患者于去年12月1日发病，且无华南海鲜市场暴露史。
+          </p>
+        </div>
+        <div>
+          <p class="time">12月2日</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
+            officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
+            eaque harum voluptate?
+          </p>
+        </div>
+        <div>
+          <p class="time">12月3日</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
+            officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
+            eaque harum voluptate?
+          </p>
+        </div>
+        <div>
+          <p class="time">12月3日</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
+            officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
+            eaque harum voluptate?
+          </p>
+        </div>
+        <div>
+          <p class="time">12月3日</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
+            officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
+            eaque harum voluptate?
+          </p>
+        </div>
+        <div>
+          <p class="time">12月3日</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
+            officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
+            eaque harum voluptate?
+          </p>
+        </div>
+        <div>
+          <p class="time">12月3日</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
+            officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
+            eaque harum voluptate?
+          </p>
+        </div>
+        <div>
+          <p class="time">12月3日</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
+            officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
+            eaque harum voluptate?
+          </p>
+        </div>
+        <div>
+          <p class="time">12月3日</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
+            officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
+            eaque harum voluptate?
+          </p>
+        </div>
+        <div>
+          <p class="time">12月3日</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
+            officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
+            eaque harum voluptate?
+          </p>
+        </div>
+        <div>
+          <p class="time">12月3日</p>
+          <p class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            adipisci nobis, quas fuga quasi nesciunt voluptatem, quia voluptate
+            officia enim amet odit corrupti? Aliquid, modi quaerat accusantium
+            eaque harum voluptate?
+          </p>
+        </div>
       </div>
     </div>
-  </div>
   </body>
 </html>
