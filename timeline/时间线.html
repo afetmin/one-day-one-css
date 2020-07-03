@@ -139,18 +139,22 @@
       return `${month + 1}月${day}日`;
     }
     // console.log(timeToDate("2019-12-27 00:00:00"));
+    // 点击内容渐进
     function overLay(that) {
       $(that).parent().next().fadeIn(200);
       $(that).parent().next().children().fadeIn(300);
     }
+    // 渐出
     function closeOverlay() {
       $(".overlay").fadeOut();
       $(".remark").fadeOut();
     }
+    // 插入video
     function getvideo(video) {
       return `<video width="800" height="500" preload="none" controls>
     <source src="${video}" type="video/mp4"></video>`
     }
+    // 获取写入数据
     $.getJSON("data__asc_1.json", (data) => {
       // console.log(data.data);
       const timelines = data.data;
