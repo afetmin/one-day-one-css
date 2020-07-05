@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>全国疫情监控</title>
+    <link href="style/main.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/echarts-wordcloud.min.js"></script>
+    <script>
+      // document.addEventListener("keydown", function (event) {
+      //   return 123 != event.keyCode || (event.returnValue = false);
+      // });
+      // document.addEventListener("contextmenu", function (event) {
+      //   return (event.returnValue = false);
+      // });
+    </script>
+    <!-- <script>
+      (function (a) {
+        return (function (a) {
+          return Function('Function(arguments[0]+"' + a + '")()');
+        })(a);
+      })("bugger")("de", 0, 0, (0, 0));
+    </script> -->
+  </head>
+  <body>
+    <div id="gyroContain">
+      <div id="header">
+        <div id="data">
+          <a href="http://aiiyx.cn" target="_blank">疫情监控</a>&nbsp;|&nbsp;<a
+            href="https://coronavirus.jhu.edu/map.html"
+            target="_blank"
+            >世界疫情实时追踪</a
+          ><br />
+          数据来源：各地区卫健委
+        </div>
+        <div id="tit"><span>全国疫情实时追踪</span></div>
+        <div id="tim"></div>
+      </div>
+      <footer id="footer"></footer>
+      <div id="c1">
+        <div class="num" id="num1"><h1></h1></div>
+        <div class="num" id="num2"><h1></h1></div>
+        <div class="num" id="num3"><h1></h1></div>
+        <div class="num" id="num4"><h1></h1></div>
+        <div style="clear: both;"></div>
+        <div class="txt"><h2></h2></div>
+        <div class="txt"><h2></h2></div>
+        <div class="txt"><h2></h2></div>
+        <div class="txt"><h2></h2></div>
+        <div style="clear: both;"></div>
+      </div>
+      <div id="c2"></div>
+      <div id="l1"></div>
+      <div id="l2"></div>
+      <div id="r1"></div>
+      <div id="r2"></div>
+    </div>
+    <script src="js/ec_center.js"></script>
+    <script src="js/ec_left1.js"></script>
+    <script src="js/ec_left2.js"></script>
+    <script src="js/ec_right1.js"></script>
+    <script src="js/ec_right2.js"></script>
+    <script src="js/controller.js"></script>
+  </body>
+</html>
