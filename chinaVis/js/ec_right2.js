@@ -1,9 +1,9 @@
 var ec_right2 = echarts.init(document.getElementById("r2"), "dark");
-var ddd = [
-  { name: "肺炎", value: "12734670" },
-  { name: "实时", value: "12734670" },
-  { name: "新型", value: "12734670" },
-];
+// var ddd = [
+//   { name: "肺炎", value: "12734670" },
+//   { name: "实时", value: "12734670" },
+//   { name: "新型", value: "12734670" },
+// ];
 var ec_right2_option = {
   backgroundColor: "",
   title: { text: "今日疫情热搜", textStyle: { color: "white" }, left: "left" },
