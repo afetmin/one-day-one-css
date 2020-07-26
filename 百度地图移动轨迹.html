@@ -13,11 +13,14 @@
         margin: 0;
         font-family: '微软雅黑';
       }
-      #control {
+      .option {
         position: absolute;
         top: 10px;
         left: 10px;
         z-index: 999;
+      }
+      select {
+        margin-right: 10px;
       }
     </style>
     <script
@@ -28,111 +31,156 @@
       type="text/javascript"
       src="http://api.map.baidu.com/api?type=webgl&v=1.0&ak=5rQ58KpwMGBWUZiOzaCagbuakMiNCKK3"
     ></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery-csv/1.0.11/jquery.csv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"></script>
     <title>视角动画</title>
   </head>
   <body>
     <div id="allmap"></div>
-    <!-- <div id="control">
-      <input type="button" onclick="showOver()" value="显示" />
-      <input type="button" onclick="hideOver()" value="隐藏" />
-    </div> -->
+    <div class="option">
+      <select name="user" id="user">
+        <option disabled selected hidden>请选择一个用户</option>
+        <option value="2370637524491">2370637524491</option>
+        <option value="180331187917334">180331187917334</option>
+        <option value="191824106988074">191824106988074</option>
+        <option value="1474551184547353">1474551184547353</option>
+      </select>
+      <select name="date" id="date">
+        <option disabled selected hidden>请选择一个日期</option>
+      </select>
+      <div>
+        是否清除覆盖物:
+        <label><input type="radio" name="clear" value="1" checked />是</label>
+        <label><input type="radio" name="clear" value="0" />否</label>
+      </div>
+    </div>
   </body>
 </html>
 <script type="text/javascript">
-  const iconImg = 'us_mk_icon.png'
-  // 数据点
-  var path = [
-    {
-      lng: 126.533262,
-      lat: 43.843651,
-    },
-    {
-      lng: 126.533262,
-      lat: 43.843651,
-    },
-    {
-      lng: 126.533262,
-      lat: 43.843651,
-    },
-    {
-      lng: 126.533262,
-      lat: 43.843651,
-    },
-    {
-      lng: 126.537391,
-      lat: 43.845061,
-    },
-    {
-      lng: 126.533262,
-      lat: 43.843651,
-    },
-    {
-      lng: 126.533262,
-      lat: 43.843651,
-    },
-  ]
-  var point = []
-  for (var i = 0; i < path.length; i++) {
-    point.push(new BMapGL.Point(path[i].lng, path[i].lat))
-  }
+  crossDomain: true
+  // var iconImg = 'us_mk_icon.png'
+  var csv_file = 'track_data.csv'
+  var jsonData, groupData, result, data, user, date
+  var $date = $('#date')
+  $('#user').change(function () {
+    user = $(this).val()
+    result = groupData[user]
+    var date_list = []
+    for (let i = 0; i < result.length; i++) {
+      date_list.push(result[i]['date'].substring(0, 8))
+    }
+    date_list = [...new Set(date_list)]
+    console.log(date_list)
+    $date.empty()
+    $date.append(`<option disabled selected hidden>请选择一个日期</option>`)
+    date_list.forEach((item) => {
+      $date.append(`<option value='${item}'>${item}</option>`)
+    })
 
-  // 初始化, 按住鼠标右键，修改倾斜角和角度
+    $date.each(function () {
+      $(this).find('option').eq(0).prop('selected', true)
+    })
+    bmap = new BMapGL.Map('allmap')
+    bmap.centerAndZoom(new BMapGL.Point('126.57', '43.87'), 15)
+  })
+  $date.change(function () {
+    date = $(this).val()
+    if ($('input:radio:checked').val() === '1') {
+      bmap.clearOverlays()
+    }
+    if (user && date) {
+      // console.log(result)
+      var reg = new RegExp(date)
+      console.log(reg)
+      data = result.filter((x) => {
+        return reg.test(x['date'])
+      })
+      console.log(data)
+      genMap()
+    }
+  })
+  var myajax = $.ajax({
+    type: 'GET',
+    url: csv_file,
+    async: false,
+    dataType: 'text',
+    error: function (e) {
+      console.log('Cannot read file: ', e)
+    },
+    success: function (data) {
+      jsonData = $.csv.toObjects(data)
+      // console.log(jsonData)
+      groupData = _.groupBy(jsonData, 'ID')
+      // console.log(groupData)
+    },
+  })
+  function genMap() {
+    // 数据点
+    var path = data
+    var point = []
+    for (var i = 0; i < path.length; i++) {
+      point.push(new BMapGL.Point(path[i]['longitude'], path[i]['latitude']))
+    }
+    // 初始化, 按住鼠标右键，修改倾斜角和角度
+    bmap.centerAndZoom(point[0], 15) // 初始化地图,设置中心点坐标和地图级别
+    bmap.enableScrollWheelZoom(true) // 开启鼠标滚轮缩放
+    // 获得图标
+    // function getIcon() {
+    //   var icon = new BMapGL.Icon(iconImg, new BMapGL.Size(23, 25), {
+    //     offset: new BMapGL.Size(50, 50),
+    //     imageOffset: new BMapGL.Size(0, 21),
+    //   })
+    //   return icon
+    // }
+
+    // 添加标注
+    function addMarker(point) {
+      var marker = new BMapGL.Marker(point, {
+        title: user,
+      })
+      bmap.addOverlay(marker)
+    }
+
+    // 随机颜色
+    function getColor() {
+      // var colorValue = '0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f'
+      // var colorArray = colorValue.split(',')
+      // var color = '#'
+      // for (var i = 0; i < 6; i++) {
+      //   color += colorArray[Math.floor(Math.random() * 16)]
+      // }
+      return '#' + Math.floor(Math.random() * 16777215).toString(16)
+    }
+
+    // 轨迹线
+    function addPolyline() {
+      var pl = new BMapGL.Polyline(point, {
+        strokeColor: getColor(),
+        strokeWeight: 4,
+        strokeOpacity: 0.5,
+      })
+      bmap.addOverlay(pl)
+    }
+    // 所有标注
+    function addAllMarker() {
+      // 自定义添加起点的标注点
+      // var marker2 = new BMapGL.Marker(point[0], { icon: getIcon() }) //起点
+      // bmap.addOverlay(marker2)
+
+      // 其他所有标记点
+      for (let i = 0, l = point.length; i < l; i++) {
+        addMarker(point[i])
+      }
+    }
+
+    function initMap() {
+      addPolyline()
+      addAllMarker()
+    }
+    initMap()
+  }
   var bmap = new BMapGL.Map('allmap') // 创建Map实例
-  bmap.centerAndZoom(point[3], 16) // 初始化地图,设置中心点坐标和地图级别
+  bmap.centerAndZoom(new BMapGL.Point('126.57', '43.87'), 15) // 初始化地图,设置中心点坐标和地图级别
   bmap.enableScrollWheelZoom(true) // 开启鼠标滚轮缩放
-
-  // 获得图标
-  function getIcon() {
-    var icon = new BMapGL.Icon(iconImg, new BMapGL.Size(23, 25), {
-      offset: new BMapGL.Size(13, 22),
-      imageOffset: new BMapGL.Size(0, 21),
-    })
-    return icon
-  }
-
-  // 添加标注
-  function addMarker(point) {
-    var marker = new BMapGL.Marker(point,{
-      title: '用户1'
-    })
-    bmap.addOverlay(marker)
-  }
-
-  // 随机颜色
-  function getColor() {
-    var colorValue = '0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f'
-    var colorArray = colorValue.split(',')
-    var color = '#'
-    for (var i = 0; i < 6; i++) {
-      color += colorArray[Math.floor(Math.random() * 16)]
-    }
-    return color
-  }
-
-  // 轨迹线
-  function addPolyline() {
-    var pl = new BMapGL.Polyline(point, {
-      strokeColor: getColor(),
-      strokeWeight: 4,
-      strokeOpacity: 0.8,
-    })
-    bmap.addOverlay(pl)
-  }
-  // 所有标注
-  function addAllMarker() {
-    // 自定义添加起点的标注点
-    var marker2 = new BMapGL.Marker(point[0], { icon: getIcon() }) //起点
-    bmap.addOverlay(marker2)
-
-    // 其他所有标记点
-    for (let i = 1, l = point.length; i < l; i++) {
-      addMarker(point[i])
-    }
-  }
-
-  function initMap() {
-    addPolyline()
-    addAllMarker()
-  }
-  initMap()
 </script>
