@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2c3e50;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 300px;
+      height: 450px;
+      border-radius: 20px;
+      background-color: #34495e;
+      box-shadow: 15px 15px 10px rgba(33, 45, 58, .3);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container form {
+      width: 300px;
+      height: 200px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    .container form .tbx {
+      width: 200px;
+      height: 40px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #fff;
+      background: none;
+      color: #fff;
+    }
+
+    /* 设置placeholder */
+    .container form .tbx::placeholder {
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .container form .sub {
+      width: 200px;
+      height: 40px;
+      outline: none;
+      border: 1px solid #fff;
+      border-radius: 20px;
+      letter-spacing: 5px;
+      color: #fff;
+      background: none;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .container h1 {
+      z-index: 1;
+      color: #ecf0f1;
+      letter-spacing: 5px;
+      padding-left: 5px;
+      font-size: 50px;
+      font-weight: 100;
+      text-shadow: 5px 5px 5px rgba(33, 45, 58, .3);
+    }
+
+    /* 鼠标进入的样式 */
+    .container .in {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: #3498bd;
+      transform: translate(-50%, -50%);
+      /* 使用in动画 持续0.5s 缓出的时间函数 停留在最后一帧 */
+      animation: in .5s ease-out forwards;
+    }
+
+    /* 鼠标出去的样式 */
+    .container .out {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1200px;
+      height: 1200px;
+      border-radius: 50%;
+      background: #3498bd;
+      transform: translate(-50%, -50%);
+      animation: out .5s ease-out forwards;
+    }
+
+    @keyframes in {
+      0% {
+        width: 0;
+        height: 0;
+      }
+      100% {
+        width: 1200px;
+        height: 1200px;
+      }
+    }
+
+    @keyframes out {
+      0% {
+        width: 1200px;
+        height: 1200px;
+      }
+      100% {
+        width: 0;
+        height: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>HELPFUL</h1>
+    <form action="">
+      <input type="text" class="tbx" placeholder="yes">
+      <input type="text" class="tbx" placeholder="no">
+      <input class="sub" type="submit" value="submit">
+    </form>
+  </div>
+</body>
+<script>
+  const con = $('.container')
+  let isIn = true
+  let isOut = false
+  var span
+  con.on('mouseenter', (e) => {
+    if (isIn) {
+      // 生成元素的位置=进入点距离窗口的距离-父盒子距离窗口的距离
+      let inx = e.clientX - e.target.offsetLeft
+      let iny = e.clientY - e.target.offsetTop
+
+      let el = $('<span></span>')
+      el.css({
+        left: inx + 'px',
+        top: iny + 'px'
+      })
+
+      el.appendTo(con)
+      $('.container span').removeClass('out')
+      $('.container span').addClass('in')
+      span = $('.container span')
+      isIn = false
+      isOut = true
+    }
+  })
+  con.on('mouseleave',(e) => {
+    if (isOut) {
+      let inx = e.clientX - e.target.offsetLeft
+      let iny = e.clientY - e.target.offsetTop
+      $('.container span').removeClass('in')
+      $('.container span').addClass('out')
+      $('.out').css({
+        left: inx + 'px',
+        top: iny + 'px'
+      })
+      isOut = false
+      setTimeout(() => {
+        $('span').remove()
+        isIn = true
+      },500)
+    }
+  })
+</script>
+
+</html>
