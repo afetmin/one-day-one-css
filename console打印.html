@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+  console.log(fun) //fun is not defined
+
+  console.log(person)
+</script>
+
+<script>
+  console.log(person) //undefined
+
+  console.log(fun) //fun(){...}
+
+  var person = "Eric";
+
+  console.log(person) // Eric
+
+  function fun() {
+      console.log(person) //undefined
+      var person = "Tom";
+      console.log(person) //Tom
+  }
+
+  fun()
+
+  console.log(person) //Eric
+</script>
+</html>
