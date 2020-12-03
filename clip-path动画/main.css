@@ -1,0 +1,1233 @@
+@keyframes bird_bg {
+  to {
+    fill: #A4C5EA;
+  }
+}
+
+/* 定义bird的背景色 */
+
+@keyframes bird1 {
+  to {
+    d: path('M 641.7,165.6 765.7,212.6 711.7,139.6z');
+    fill: #DA5336;
+  }
+}
+
+@keyframes bird2 {
+  to {
+    d: path('M 682.2,124 765.9,212.8 785.5,121.5z');
+    fill: #CB4C3A;
+  }
+}
+
+@keyframes bird3 {
+  to {
+    d: path('M 785.5,121.5 765.9,212.8 789.5,183.5z');
+    fill: #E5DA8D;
+  }
+}
+
+@keyframes bird4 {
+  to {
+    d: path('M 697.8,225.1 765.5,212.5 728,198.1z');
+    fill: #BC4212;
+  }
+}
+
+@keyframes bird5 {
+  to {
+    d: path('M 717.5,221.5 764.5,238.5 765.5,212.5z');
+    fill: #CC9062;
+  }
+}
+
+@keyframes bird6 {
+  to {
+    d: path('M 821.5,218.5 810.5,234.5 835.5,234.5z');
+    fill: #3A2228;
+  }
+}
+
+@keyframes bird7 {
+  to {
+    d: path('M 765.5,212.5 763.5,239.5 831.5,248.5z');
+    fill: #E7BC65;
+  }
+}
+
+@keyframes bird8 {
+  to {
+    d: path('M 787.8,183.5 765.9,212.8 846.5,218.5z');
+    fill: #DFCD84;
+  }
+}
+
+@keyframes bird9 {
+  to {
+    d: path('M 185.5,576.5 434.5,443.5 382.5,420.5z');
+    fill: #EEE5D9;
+  }
+}
+
+@keyframes bird10 {
+  to {
+    d: path('M 274.5,486.5 383.5,422.5 320.5,442.5z');
+    fill: #32281D;
+  }
+}
+
+@keyframes bird11 {
+  to {
+    d: path('M 294.5,453.5 543.9,370.2 439,323z');
+    fill: #3C3329;
+  }
+}
+
+@keyframes bird12 {
+  to {
+    d: path('M 461.5,544.5 481.5,559.5 639.5,458.5z');
+    fill: #4A3042;
+  }
+}
+
+@keyframes bird13 {
+  to {
+    d: path('M 387,424 496.5,478.5 505.5,414.5z');
+    fill: #DDD7C9;
+  }
+}
+
+@keyframes bird14 {
+  to {
+    d: path('M 647.5,402.5 620.5,418.5 502,414.5z');
+    fill: #EEE5D9;
+  }
+}
+
+@keyframes bird15 {
+  to {
+    d: path('M 620.5,418.5 491.5,491.5 500,414.5z');
+    fill: #F4FBF3;
+  }
+}
+
+@keyframes bird16 {
+  to {
+    d: path('M 564.5,555.5 568.4,533.4 554.5,520.5z');
+    fill: #744A0F;
+  }
+}
+
+@keyframes bird17 {
+  to {
+    d: path('M 440.5,616.5 481.2,559.3 462.2,544.8z');
+    fill: #3A2228;
+  }
+}
+
+@keyframes bird18 {
+  to {
+    d: path('M 505.5,482.5 568.5,533.5 520.5,474.5z');
+    fill: #D65100;
+  }
+}
+
+@keyframes bird19 {
+  to {
+    d: path('M 521.5,473.5 588.5,511.5 536.5,465.5z');
+    fill: #AE441C;
+  }
+}
+
+@keyframes bird20 {
+  to {
+    d: path('M 501.5,525.5 537.1,508.1 529.2,501.7z');
+    fill: #931F00;
+  }
+}
+
+@keyframes bird21 {
+  to {
+    d: path('M 586.2,531.9 588.5,511.5 572.5,502.4z');
+    fill: #931F00;
+  }
+}
+
+@keyframes bird22 {
+  to {
+    d: path('M 376.9,426.1 635.5,404.5 543,368z');
+    fill: #302717;
+  }
+}
+
+@keyframes bird23 {
+  to {
+    d: path('M 433.1,325.3 595.5,263.5 480.5,272.5z');
+    fill: #564A42;
+  }
+}
+
+@keyframes bird24 {
+  to {
+    d: path('M 439,323 544.5,370.5 593.5,263.5z');
+    fill: #4B413B;
+  }
+}
+
+@keyframes bird25 {
+  to {
+    d: path('M 593.5,263.5 637.5,279.7 603.5,179.5z');
+    fill: #302717;
+  }
+}
+
+@keyframes bird26 {
+  to {
+    d: path('M 637.5,280.5 728,198.1 641.5,165.5z');
+    fill: #C34A2A;
+  }
+}
+
+@keyframes bird27 {
+  to {
+    d: path('M 638.5,279.5 718.5,307.5 676.5,244.5z');
+    fill: #D2664A;
+  }
+}
+
+@keyframes bird28 {
+  to {
+    d: path('M 676.5,244.5 718.5,307.5 698.5,224.5z');
+    fill: #D07D5D;
+  }
+}
+
+@keyframes bird29 {
+  to {
+    d: path('M 616.5,218.5 641.5,165.5 603.2,178.8z');
+    fill: #4B3225;
+  }
+}
+
+@keyframes bird30 {
+  to {
+    d: path('M 637.5,280.5 641.5,165.5 616.5,218.5z');
+    fill: #A42613;
+  }
+}
+
+@keyframes bird31 {
+  to {
+    d: path('M 593.5,263.5 543.7,370.5 718.5,307.5z');
+    fill: #564A42;
+  }
+}
+
+@keyframes bird32 {
+  to {
+    d: path('M 594.5,182.5 701.8,144.7 672.2,106.8z');
+    fill: #452D1F;
+  }
+}
+
+@keyframes bird33 {
+  to {
+    d: path('M 718.5,307.5 545,370.1 652.5,411.5z');
+    fill: #4B413B;
+  }
+}
+
+/* ******************************************************************************************************** */
+
+@keyframes whale_bg {
+  to {
+    fill: #73DBE0;
+  }
+}
+
+/* 定义whale的背景色 */
+
+@keyframes whale1 {
+  to {
+    d: path('M 259,143.3 239.5,169 280.7,160.7z');
+    fill: #FFFFFF;
+  }
+}
+
+@keyframes whale2 {
+  to {
+    d: path('M 854.2,196.7 828.4,192.9 843.3,211.7z');
+    fill: #FFFFFF;
+  }
+}
+
+@keyframes whale3 {
+  to {
+    d: path('M 583.5,119.9 570.5,127.8 604.8,129.2z');
+    fill: #FFFFFF;
+  }
+}
+
+@keyframes whale4 {
+  to {
+    d: path('M 306.3,458.6 395.5,506.5 359.5,456.5z');
+    fill: #0D1417;
+  }
+}
+
+@keyframes whale5 {
+  to {
+    d: path('M 210.5,362.5 170.5,444.5 239.5,366.5z');
+    fill: #3C4650;
+  }
+}
+
+@keyframes whale6 {
+  to {
+    d: path('M 213.5,419.5 239.5,366.5 170.5,444.5z');
+    fill: #0F1622;
+  }
+}
+
+@keyframes whale7 {
+  to {
+    d: path('M 201.5,443.5 213.5,419.5 170.5,444.5z');
+    fill: #D9EADF;
+  }
+}
+
+@keyframes whale8 {
+  to {
+    d: path('M 169.5,454.5 170.5,444.5 201.5,443.5z');
+    fill: #334543;
+  }
+}
+
+@keyframes whale9 {
+  to {
+    d: path('M 188.5,462.5 169.5,454.5 201.5,443.5z');
+    fill: #111619;
+  }
+}
+
+@keyframes whale10 {
+  to {
+    d: path('M 359.5,457 201.5,443.5 188.5,462.5z');
+    fill: #D9EBEB;
+  }
+}
+
+@keyframes whale11 {
+  to {
+    d: path('M 239.5,424.5 222,445.6 359.5,457z');
+    fill: #BDD0D0;
+  }
+}
+
+@keyframes whale12 {
+  to {
+    d: path('M 239.5,424.5 201.5,443.5 213.5,419.5z');
+    fill: #333C40;
+  }
+}
+
+@keyframes whale13 {
+  to {
+    d: path('M 201.5,443.5 221.5,445.5 239.5,424.5z');
+    fill: #1C2529;
+  }
+}
+
+@keyframes whale14 {
+  to {
+    d: path('M 239.5,365.5 239.5,424.5 213.5,419.5z');
+    fill: #62827F;
+  }
+}
+
+@keyframes whale15 {
+  to {
+    d: path('M 395.5,296.5 239.5,366.5 210.5,362.5z');
+    fill: #273537;
+  }
+}
+
+@keyframes whale16 {
+  to {
+    d: path('M 397.5,329.5 239.5,424.5 239.5,366.5z');
+    fill: #486461;
+  }
+}
+
+@keyframes whale17 {
+  to {
+    d: path('M 570.5,307.5 239.5,366.5 423.5,283.5z');
+    fill: #384E4D;
+  }
+}
+
+@keyframes whale18 {
+  to {
+    d: path('M 582.5,397.5 397.5,329.5 369.5,381.5z');
+    fill: #739998;
+  }
+}
+
+@keyframes whale19 {
+  to {
+    d: path('M 239.5,424.5 369.5,381.5 397.5,329.5z');
+    fill: #62827F;
+  }
+}
+
+@keyframes whale20 {
+  to {
+    d: path('M 359.5,457 369.5,381.5 239.5,424.5z');
+    fill: #AAC7C6;
+  }
+}
+
+@keyframes whale21 {
+  to {
+    d: path('M 545.5,459.5 369.5,381.5 359.5,456.5z');
+    fill: #D9EBEB;
+  }
+}
+
+@keyframes whale22 {
+  to {
+    d: path('M 545.5,459.5 582.5,397.5 369.5,381.5z');
+    fill: #D8E2DE;
+  }
+}
+
+@keyframes whale23 {
+  to {
+    d: path('M 709.5,381.5 582.5,397.5 545.5,459.5z');
+    fill: #C0DBD3;
+  }
+}
+
+@keyframes whale24 {
+  to {
+    d: path('M 546.2,336.5 397.4,329.6 582.5,397.5z');
+    fill: #486461;
+  }
+}
+
+@keyframes whale25 {
+  to {
+    d: path('M 570.5,307.5 546,337 582.5,397.5z');
+    fill: #384E4D;
+  }
+}
+
+@keyframes whale26 {
+  to {
+    d: path('M 546,337 570.5,307.5 397.6,329.5z');
+    fill: #415555;
+  }
+}
+
+@keyframes whale27 {
+  to {
+    d: path('M 709.5,380.5 570.5,307.5 582.5,397.5z');
+    fill: #4B6364;
+  }
+}
+
+@keyframes whale28 {
+  to {
+    d: path('M 773.5,340.5 709.5,380.5 570.5,307.5z');
+    fill: #2D3B3B;
+  }
+}
+
+@keyframes whale29 {
+  to {
+    d: path('M 479.5,303.5 391.9,298.1 482.5,225.5z');
+    fill: #2D3B3B;
+  }
+}
+
+@keyframes whale30 {
+  to {
+    d: path('M 885.5,326.5 736.5,345.5 797.5,323.5z');
+    fill: #365255;
+  }
+}
+
+@keyframes whale31 {
+  to {
+    d: path('M 820.5,355.5 885.5,326.5 738.8,345.2z');
+    fill: #678781;
+  }
+}
+
+@keyframes whale32 {
+  to {
+    d: path('M 415.5,444.5 424.6,487 316.5,426.5z');
+    fill: #334543;
+  }
+}
+
+@keyframes whale33 {
+  to {
+    d: path('M 425.5,487.5 316.5,426.5 462.5,529.5z');
+    fill: #21282F;
+  }
+}
+
+/* ******************************************************************************************************** */
+@keyframes frog_bg {
+  to {
+    fill: #ffcffc;
+  }
+}
+
+/* 定义frog的背景色 */
+
+@keyframes frog1 {
+  to {
+    d: path('M 506,586.5 783,577.5 261,459.5z');
+    fill: #4E9F73;
+  }
+}
+
+@keyframes frog2 {
+  to {
+    d: path('M 783,577.5 261,459.5 575,450.5z');
+    fill: #3B6F4B;
+  }
+}
+
+@keyframes frog3 {
+  to {
+    d: path('M 268.5,210 274.5,250 326.4,219.7z');
+    fill: #FEDD48;
+  }
+}
+
+@keyframes frog4 {
+  to {
+    d: path('M 362,198.2 371,324.5 274.5,250z');
+    fill: #F1C83A;
+  }
+}
+
+@keyframes frog5 {
+  to {
+    d: path('M 439,265.5 371,324.5 362,199.5z');
+    fill: #E7C041;
+  }
+}
+
+@keyframes frog6 {
+  to {
+    d: path('M 406,201.5 439,265.5 362,199.5z');
+    fill: #FDD558;
+  }
+}
+
+@keyframes frog7 {
+  to {
+    d: path('M 324,242.5 384,259.5 362.8,205.8z');
+    fill: #F5E58E;
+  }
+}
+
+@keyframes frog8 {
+  to {
+    d: path('M 368,178.5 305.3,198.4 406,201.5z');
+    fill: #FFF891;
+  }
+}
+
+@keyframes frog9 {
+  to {
+    d: path('M 562.5,286.1 439,265.5 406,201.5z');
+    fill: #F1EB7C;
+  }
+}
+
+@keyframes frog10 {
+  to {
+    d: path('M 440,347.5 371,324.5 439,265.5z');
+    fill: #FACA34;
+  }
+}
+
+@keyframes frog11 {
+  to {
+    d: path('M 526.5,384.1 534,473.5 442,389.4z');
+    fill: #E6BF2B;
+  }
+}
+
+@keyframes frog12 {
+  to {
+    d: path('M 666.5,427.1 533.5,474.1 526.5,384.1z');
+    fill: #F3CD37;
+  }
+}
+
+@keyframes frog13 {
+  to {
+    d: path('M 526.5,384.1 439,265.5 440,400z');
+    fill: #FED63C;
+  }
+}
+
+@keyframes frog14 {
+  to {
+    d: path('M 562.5,286.1 526.5,384.1 439,265.5z');
+    fill: #F9E049;
+  }
+}
+
+@keyframes frog15 {
+  to {
+    d: path('M 562.5,286.1 526.5,384.1 666.5,427.1z');
+    fill: #FEEC63;
+  }
+}
+
+@keyframes frog16 {
+  to {
+    d: path('M 553,549.5 667,426.5 534,473.5z');
+    fill: #F9DB35;
+  }
+}
+
+@keyframes frog17 {
+  to {
+    d: path('M 721,459.5 572.1,528.9 645,450.2z');
+    fill: #986E19;
+  }
+}
+
+@keyframes frog18 {
+  to {
+    d: path('M 655,568.5 588,558.5 743,487.5z');
+    fill: #FDDA54;
+  }
+}
+
+@keyframes frog19 {
+  to {
+    d: path('M 497,493.5 356,483.5 428.4,504.7z');
+    fill: #2C2924;
+  }
+}
+
+@keyframes frog20 {
+  to {
+    d: path('M 287,531.5 307.3,483.5 261,459.5z');
+    fill: #1D3246;
+  }
+}
+
+@keyframes frog21 {
+  to {
+    d: path('M 530,563.5 649.4,567.7 588,558.5z');
+    fill: #2C2924;
+  }
+}
+
+@keyframes frog22 {
+  to {
+    d: path('M 534,473.5 371,324.5 445,437.5z');
+    fill: #70540E;
+  }
+}
+
+@keyframes frog23 {
+  to {
+    d: path('M 497,426.5 440,347.5 394,372.5z');
+    fill: #F0EA75;
+  }
+}
+
+@keyframes frog24 {
+  to {
+    d: path('M 394,372.5 371,324.5 440,347.5z');
+    fill: #FBD942;
+  }
+}
+
+@keyframes frog25 {
+  to {
+    d: path('M 387.5,492.7 497,426.5 459.7,406.9z');
+    fill: #D8C533;
+  }
+}
+
+@keyframes frog26 {
+  to {
+    d: path('M 428.4,504.7 497,426.5 387.5,492.7z');
+    fill: #BDA126;
+  }
+}
+
+@keyframes frog27 {
+  to {
+    d: path('M 743,487.5 553,549.5 621.2,475.9z');
+    fill: #FAC62D;
+  }
+}
+
+@keyframes frog28 {
+  to {
+    d: path('M 317,194.5 269.6,210.2 326.4,219.7z');
+    fill: #FDD34D;
+  }
+}
+
+@keyframes frog29 {
+  to {
+    d: path('M 317.1,194.7 362,200.1 326.4,219.7z');
+    fill: #F3E66B;
+  }
+}
+
+@keyframes frog30 {
+  to {
+    d: path('M 290,277 274.5,250 371,324.5z');
+    fill: #CFAD2D;
+  }
+}
+
+@keyframes frog31 {
+  to {
+    d: path('M 343,270.5 324,242.5 384,259.5z');
+    fill: #3F3939;
+  }
+}
+
+@keyframes frog32 {
+  to {
+    d: path('M 357,230.5 324,242.5 384,259.5z');
+    fill: #4E4D4F;
+  }
+}
+
+@keyframes frog33 {
+  to {
+    d: path('M 347,238.5 339,240.5 343,245.5z');
+    fill: #FFFFFF;
+  }
+}
+
+
+/* ******************************************************************************************************** */
+
+
+@keyframes sheep_bg {
+  to {
+    fill: #87ccc4;
+  }
+}
+
+/* 定义sheep的背景色 */
+
+@keyframes sheep1 {
+  to {
+    d: path('M 377,293 319.3,344 496.7,308.7z');
+    fill: #F1E0D2;
+  }
+}
+
+@keyframes sheep2 {
+  to {
+    d: path('M 524,393.7 496.7,308.7 417.2,407.4z');
+    fill: #E9DCC4;
+  }
+}
+
+@keyframes sheep3 {
+  to {
+    d: path('M 456,470 387,432.3 416,405z');
+    fill: #888172;
+  }
+}
+
+@keyframes sheep4 {
+  to {
+    d: path('M 414.3,402.3 524,393.7 456,470z');
+    fill: #CFBA91;
+  }
+}
+
+@keyframes sheep5 {
+  to {
+    d: path('M 564.3,459.7 456,470 524,393.7z');
+    fill: #BAAE96;
+  }
+}
+
+@keyframes sheep6 {
+  to {
+    d: path('M 367,569.7 391,428.6 352.3,461z');
+    fill: #867367;
+  }
+}
+
+@keyframes sheep7 {
+  to {
+    d: path('M 327.3,569.7 355.7,458.1 311,494.7z');
+    fill: #F2E1C5;
+  }
+}
+
+@keyframes sheep8 {
+  to {
+    d: path('M 320.9,414.9 403.6,419.8 311,494.7z');
+    fill: #DACAAB;
+  }
+}
+
+@keyframes sheep9 {
+  to {
+    d: path('M 319.3,344 403.6,419.8 320.9,414.9z');
+    fill: #B6937B;
+  }
+}
+
+@keyframes sheep10 {
+  to {
+    d: path('M 603.2,307.7 524,393.7 496.7,308.7z');
+    fill: #EBE1CB;
+  }
+}
+
+@keyframes sheep11 {
+  to {
+    d: path('M 551.5,290 496.7,308.7 603.2,307.7z');
+    fill: #F3EADF;
+  }
+}
+
+@keyframes sheep12 {
+  to {
+    d: path('M 600.5,413.3 603.2,307.7 524,393.7z');
+    fill: #DDCFB7;
+  }
+}
+
+@keyframes sheep13 {
+  to {
+    d: path('M 640.7,435.7 603.2,307.7 599.3,450.1z');
+    fill: #78523B;
+  }
+}
+
+@keyframes sheep14 {
+  to {
+    d: path('M 586.7,572 598.8,512.8 580.9,484.4z');
+    fill: #A89F92;
+  }
+}
+
+@keyframes sheep15 {
+  to {
+    d: path('M 697,303.5 640.7,435.7 603.2,307.7z');
+    fill: #825D48;
+  }
+}
+
+@keyframes sheep16 {
+  to {
+    d: path('M 668,240 697,303.5 603.2,307.7z');
+    fill: #A2785C;
+  }
+}
+
+@keyframes sheep17 {
+  to {
+    d: path('M 700,237.3 697,303.5 668,240z');
+    fill: #B98D5D;
+  }
+}
+
+@keyframes sheep18 {
+  to {
+    d: path('M 669.3,209.8 674.8,240 693.5,237.8z');
+    fill: #776244;
+  }
+}
+
+@keyframes sheep19 {
+  to {
+    d: path('M 717.7,305.3 640.7,435.7 697,303.5z');
+    fill: #634C39;
+  }
+}
+
+@keyframes sheep20 {
+  to {
+    d: path('M 775.4,318.3 714.5,287.8 697,303.5z');
+    fill: #AFA491;
+  }
+}
+
+@keyframes sheep21 {
+  to {
+    d: path('M 778.2,296.3 714.6,287.8 776.7,319.2z');
+    fill: #B4ABA0;
+  }
+}
+
+@keyframes sheep22 {
+  to {
+    d: path('M 741,264.2 714.5,287.8 778.2,296.3z');
+    fill: #D2C9C1;
+  }
+}
+
+@keyframes sheep23 {
+  to {
+    d: path('M 700,222.3 741,264.2 697,303.5z');
+    fill: #ECE1D5;
+  }
+}
+
+@keyframes sheep24 {
+  to {
+    d: path('M 655.3,158.9 692.6,234.6 705.7,223.5z');
+    fill: #514C49;
+  }
+}
+
+@keyframes sheep25 {
+  to {
+    d: path('M 522.8,126 661.7,171.8 655,158.3z');
+    fill: #312F34;
+  }
+}
+
+@keyframes sheep26 {
+  to {
+    d: path('M 437.8,155.8 522.8,126 542.3,130.8z');
+    fill: #272220;
+  }
+}
+
+@keyframes sheep27 {
+  to {
+    d: path('M 603.2,572 622.4,441.9 588.3,454z');
+    fill: #8A7B63;
+  }
+}
+
+@keyframes sheep28 {
+  to {
+    d: path('M 596.9,521.9 600.5,413.3 524,393.7z');
+    fill: #EBE1CB;
+  }
+}
+
+@keyframes sheep29 {
+  to {
+    d: path('M 405.7,421.7 319.3,344 496.7,308.7z');
+    fill: #DACEBD;
+  }
+}
+
+@keyframes sheep30 {
+  to {
+    d: path('M 729.3,202.8 688.5,238.2 706.7,237.4z');
+    fill: #C8C0B9;
+  }
+}
+
+@keyframes sheep31 {
+  to {
+    d: path('M 729.3,501.7 726.3,572 736.2,572z');
+    fill: #9CEFE5;
+  }
+}
+
+@keyframes sheep32 {
+  to {
+    d: path('M 732.6,457.8 742.9,468.3 739.3,572z');
+    fill: #A9FFCE;
+  }
+}
+
+@keyframes sheep33 {
+  to {
+    d: path('M 744,570 744,511.8 750,572z');
+    fill: #B0FFB2;
+  }
+}
+
+/* ******************************************************************************************************** */
+
+
+#p_bg {
+  fill: #4e4d5b;
+  animation: bird_bg 2s ease both;
+}
+
+#p1 {
+  d: path('M 676,284 646,433 656,209z');
+  fill: #FED581;
+  animation: bird1 2s ease both;
+}
+
+#p2 {
+  d: path('M 656,209 650,348 619,382z');
+  fill: #FCB039;
+  animation: bird2 2s ease both;
+}
+
+#p3 {
+  d: path('M 701,212 676,284 656,209z');
+  fill: #FDC25C;
+  animation: bird3 2s ease both;
+}
+
+#p4 {
+  d: path('M 735,382 676,284 713,273z');
+  fill: #FDC562;
+  animation: bird4 2s ease both;
+}
+
+#p5 {
+  d: path('M 713,273 676,284 701,212z');
+  fill: #FED785;
+  animation: bird5 2s ease both;
+}
+
+#p6 {
+  d: path('M 541,209 558,300 599,212z');
+  fill: #FFE8A6;
+  animation: bird6 2s ease both;
+}
+
+#p7 {
+  d: path('M 558,300 581,433 599,212z');
+  fill: #FEE19A;
+  animation: bird7 2s ease both;
+}
+
+#p8 {
+  d: path('M 599,212 581,433 619,382z');
+  fill: #FED581;
+  animation: bird8 2s ease both;
+}
+
+#p9 {
+  d: path('M 790,324 812,211 762,209z');
+  fill: #FA9402;
+  animation: bird9 2s ease both;
+}
+
+#p10 {
+  d: path('M 772,433 790,324 762,209z');
+  fill: #FCBE54;
+  animation: bird10 2s ease both;
+}
+
+#p11 {
+  d: path('M 706,433 772,433 735,382z');
+  fill: #FBA92C;
+  animation: bird11 2s ease both;
+}
+
+#p12 {
+  d: path('M 735,382 772,433 762,209z');
+  fill: #FBA523;
+  animation: bird12 2s ease both;
+}
+
+#p13 {
+  d: path('M 735,382 706,433 676,284z');
+  fill: #FCB542;
+  animation: bird13 2s ease both;
+}
+
+#p14 {
+  d: path('M 646,433 581,433 619,382z');
+  fill: #FED179;
+  animation: bird14 2s ease both;
+}
+
+#p15 {
+  d: path('M 439,256 510,382 507,261z');
+  fill: #FA9402;
+  animation: bird15 2s ease both;
+}
+
+#p16 {
+  d: path('M 457,367 510,382 439,256z');
+  fill: #FED785;
+  animation: bird16 2s ease both;
+}
+
+#p17 {
+  d: path('M 336,249 318,319 387,211z');
+  fill: #FEDF95;
+  animation: bird17 2s ease both;
+}
+
+#p18 {
+  d: path('M 455,211 387,211 507,261z');
+  fill: #FCB039;
+  animation: bird18 2s ease both;
+}
+
+#p19 {
+  d: path('M 507,261 387,211 439,256z');
+  fill: #FCB644;
+  animation: bird19 2s ease both;
+}
+
+#p20 {
+  d: path('M 384,372 420,438 457,367z');
+  fill: #FCBE54;
+  animation: bird20 2s ease both;
+}
+
+#p21 {
+  d: path('M 318,319 339,397 384,372z');
+  fill: #FFE8A7;
+  animation: bird21 2s ease both;
+}
+
+#p22 {
+  d: path('M 339,397 420,438 384,372z');
+  fill: #FED47F;
+  animation: bird22 2s ease both;
+}
+
+#p23 {
+  d: path('M 420,438 510,382 457,367z');
+  fill: #FCAE35;
+  animation: bird23 2s ease both;
+}
+
+#p24 {
+  d: path('M 439,256 387,211 382,272z');
+  fill: #FDC765;
+  animation: bird24 2s ease both;
+}
+
+#p25 {
+  d: path('M 387,211 318,319 382,272z');
+  fill: #FED37E;
+  animation: bird25 2s ease both;
+}
+
+#p26 {
+  d: path('M 382,272 318,319 384,372z');
+  fill: #FEDF95;
+  animation: bird26 2s ease both;
+}
+
+#p27 {
+  d: path('M 162,431 303,436 216,388z');
+  fill: #FDC562;
+  animation: bird27 2s ease both;
+}
+
+#p28 {
+  d: path('M 162,211 163,309 215,211z');
+  fill: #FFE8A6;
+  animation: bird28 2s ease both;
+}
+
+#p29 {
+  d: path('M 215.4,283.5 163,309 215,211z');
+  fill: #FED37E;
+  animation: bird29 2s ease both;
+}
+
+#p30 {
+  d: path('M 216,388 163,309 215.4,283.5z');
+  fill: #FFE8A6;
+  animation: bird30 2s ease both;
+}
+
+#p31 {
+  d: path('M 163,309 162,431 216,388z');
+  fill: #FFE1A6;
+  animation: bird31 2s ease both;
+}
+
+#p32 {
+  d: path('M 216,388 303,436 301,388z');
+  fill: #FBAC32;
+  animation: bird32 2s ease both;
+}
+
+#p33 {
+  d: path('M 650,348 646,433 619,382z');
+  fill: #FFE1A6;
+  animation: bird33 2s ease both;
+}
+
+
+
+
+
+/* 定义gray按钮样式 */
+.gray {
+  color: #e9e9e9;
+  border: solid 1px #555;
+  background: #6e6e6e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#575757));
+  background: -moz-linear-gradient(top, #888, #575757);
+  filter: progid:DXImageTransform.M icrosoft.gradient(startColorstr='#888888', endColorstr='#575757');
+}
+
+.gray:hover {
+  background: #616161;
+  background: -webkit-gradient(linear, left top, left bottom, from(#757575), to(#4b4b4b));
+  background: -moz-linear-gradient(top, #757575, #4b4b4b);
+  filter: progid:DXImageTransform.M icrosoft.gradient(startColorstr='#757575', endColorstr='#4b4b4b');
+}
+
+.gray:active {
+  color: #afafaf;
+  background: -webkit-gradient(linear, left top, left bottom, from(#575757), to(#888));
+  background: -moz-linear-gradient(top, #575757, #888);
+  filter: progid:DXImageTransform.M icrosoft.gradient(startColorstr='#575757', endColorstr='#888888');
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 960px;
+}
+
+.button {
+  display: inline-block;
+  zoom: 1;
+  /* zoom and *display = ie7 hack for display:inline-block */
+  *display: inline;
+  vertical-align: baseline;
+  margin: 5px 2px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>convertPolyToPath</title>
+  <style>
+    input {
+      margin: 10px 20px;
+    }
+
+    .show-wrapper {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .show-wrapper .svg-wrapper,
+    .show-wrapper .origin-wrapper,
+    .show-wrapper .content-wrapper {
+      flex: 1 1 500px;
+      margin-right: 5px;
+      width: 500px;
+    }
+
+    .origin-content,
+    .content {
+      position: relative;
+      border: 1px solid #333;
+      border-radius: 5px;
+      height: 800px;
+      overflow-y: auto;
+      padding: 10px;
+
+    }
+
+    #embed {
+      max-width: 600px;
+      height: 600px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      overflow-y: auto;
+    }
+    .copy {
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <input type="file" name="picture">
+    <div class="show-wrapper">
+      <div class="svg-wrapper">
+        <h2>SVG图像</h2>
+        <embed id="embed" src="" type="image/svg+xml" onload="showConvertResult()">
+      </div>
+      <div class="origin-wrapper">
+        <h2>原始数据</h2>
+        <div class="origin-content">
+          <span class="copy">复制内容</span>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <h2>转换数据</h2>
+        <div class="content">
+          <span class="copy">复制内容</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  document.querySelector('input[name=picture]').onchange = function (e) {
+    readFile(e.target.files[0]);
+  }
+
+  // 读文件
+  function readFile(file) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      applyDataUrlToEmbed(file);
+    };
+    reader.readAsDataURL(file);
+  }
+
+  // 展示
+  function applyDataUrlToEmbed(file) {
+    const embed = document.querySelector('#embed')
+    const svgUrl = window.URL.createObjectURL(file)
+    embed.src = svgUrl
+  }
+
+
+  function showConvertResult() {
+    const svgEmbed = document.getElementById('embed').getSVGDocument();
+    if (svgEmbed) {
+      showSvgString(svgEmbed)
+    }
+  }
+
+  // 显示SVG源码
+  function showSvgString(svgEmbed) {
+    const svgOriginWrapper = document.querySelector('.origin-content')
+    const svgContentWrapper = document.querySelector('.content')
+    var polys = svgEmbed.querySelectorAll('polygon,polyline');
+    const originSvgString = new XMLSerializer()
+      .serializeToString(svgEmbed);
+    if (polys.length) {
+      [].forEach.call(polys, convertPolyToPath);
+      const svgString = new XMLSerializer()
+        .serializeToString(svgEmbed);
+      svgOriginWrapper.innerText = originSvgString
+      svgContentWrapper.innerText = svgString
+    } else {
+      const svgString = new XMLSerializer()
+        .serializeToString(svgEmbed);
+      svgOriginWrapper.innerText = originSvgString
+    }
+  }
+
+
+  function convertPolyToPath(poly) {
+    var svgNS = poly.ownerSVGElement.namespaceURI;
+    var path = document.createElementNS(svgNS, 'path');
+    var pathdata = 'M ' + poly.getAttribute('points');
+    if (poly.tagName == 'polygon') pathdata += 'z';
+    path.setAttribute('d', pathdata);
+    poly.parentNode.replaceChild(path, poly);
+  }
+
+  // function convertPolyToPath(poly) {
+  //   var svgNS = poly.ownerSVGElement.namespaceURI;
+  //   var path = document.createElementNS(svgNS, 'path');
+  //   var points = poly.getAttribute('points').split(/\s+|,/);
+  //   var x0 = points.shift(),
+  //     y0 = points.shift();
+  //   var pathdata = 'M' + x0 + ',' + y0 + 'L' + points.join(' ');
+  //   if (poly.tagName == 'polygon') pathdata += 'z';
+  //   path.setAttribute('id', poly.getAttribute('id'));
+  //   path.setAttribute('fill', poly.getAttribute('fill'));
+  //   path.setAttribute('stroke', poly.getAttribute('stroke'));
+  //   path.setAttribute('d', pathdata);
+
+  //   poly.parentNode.replaceChild(path, poly);
+  // }
+</script>
+
+</html>

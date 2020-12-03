@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <child content='123'></child>
+    <child content='456'></child>
+  </div>
+</body>
+<script>
+  Vue.prototype.bus = new Vue()
+
+  Vue.component('child',{
+    props: {
+      content:String
+    },
+    data () {
+      return {
+        childContent:this.content
+      }
+    },
+    template: '<div @click="handleClick">{{childContent}}</div>',
+    methods:{
+      handleClick() {
+        this.bus.$emit('change',this.childContent)
+      }
+    },
+    mounted() {
+      let this_ = this
+      this.bus.$on('change', function(msg){
+        this_.childContent = msg
+      })
+    }
+  })
+  var app = new Vue({
+    el:'#app'
+  })
+</script>
+</html>
