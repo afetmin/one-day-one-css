@@ -74,13 +74,13 @@
       <div class="origin-wrapper">
         <h2>原始数据</h2>
         <span class="origin-copy copy">复制内容</span>
-        <div class="origin-content" >
+        <div class="origin-content">
         </div>
       </div>
       <div class="content-wrapper">
         <h2>转换数据</h2>
         <span class="result-copy copy">复制内容</span>
-        <div class="content" ></div>
+        <div class="content"></div>
       </div>
     </div>
   </div>
@@ -91,31 +91,31 @@
   const originCopy = document.querySelector('.origin-copy')
   const resultCopy = document.querySelector('.result-copy')
 
+  bindMethods()
 
-  function showCopyBtn() {
-    svgOriginContent.addEventListener('mouseenter', () => {
+  function bindMethods() {
+    svgOriginContent.onmouseenter = function () {
       originCopy.style.opacity = 1
-    }, false)
-    svgOriginContent.addEventListener('mouseout', () => {
+    }
+    svgOriginContent.onmouseout = function () {
       originCopy.style.opacity = 0
-    }, false)
-    svgResultContent.addEventListener('mouseenter', () => {
+    }
+    svgResultContent.onmouseenter = function () {
       resultCopy.style.opacity = 1
-    }, false)
-    svgResultContent.addEventListener('mouseout', () => {
+    }
+    svgResultContent.onmouseout = function () {
       resultCopy.style.opacity = 0
-    }, false)
-  }
+    }
 
-  function bindCopy() {
-    originCopy.addEventListener('click', () => {
+    originCopy.onclick = function () {
       copyContent('.origin-content')
-    })
-    resultCopy.addEventListener('click', () => {
+    }
+    resultCopy.onclick = function () {
       copyContent('.content')
-    })
+    }
   }
 
+  // 复制方法
   function copyContent(domClass) {
     const content = document.querySelector(domClass).innerText;
     const oInput = document.createElement('input');
@@ -133,7 +133,7 @@
   function removeInput() {
     const oinputs = document.querySelectorAll('.oInput')
     console.log(oinputs);
-    for (let i=0;i<oinputs.length;i++) {
+    for (let i = 0; i < oinputs.length; i++) {
       document.body.removeChild(oinputs[i])
     }
   }
@@ -168,6 +168,9 @@
 
   // 显示SVG源码
   function showSvgString(svgEmbed) {
+    // 写入前先清空
+    svgOriginContent.innerText = ''
+    svgResultContent.innerText = ''
     var polys = svgEmbed.querySelectorAll('polygon,polyline');
     const originSvgString = new XMLSerializer()
       .serializeToString(svgEmbed);
@@ -182,16 +185,13 @@
         .serializeToString(svgEmbed);
       svgOriginContent.innerText = originSvgString
     }
-    showCopyBtn()
-    bindCopy()
   }
 
 
   function convertPolyToPath(poly) {
-
-    var svgNS = poly.ownerSVGElement.namespaceURI;
-    var path = document.createElementNS(svgNS, 'path');
-    var pathdata = 'M ' + poly.getAttribute('points');
+    const svgNS = poly.ownerSVGElement.namespaceURI;
+    const path = document.createElementNS(svgNS, 'path');
+    let pathdata = 'M ' + poly.getAttribute('points');
     if (poly.tagName == 'polygon') pathdata += 'z';
     path.setAttribute('d', pathdata);
     poly.parentNode.replaceChild(path, poly);
